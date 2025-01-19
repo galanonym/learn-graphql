@@ -13,13 +13,13 @@ query HeroNameAndFriends {
 }
 ```
 
-`query` - root operation type, can be *query*, *mutation* or *subscription*
+`query` - root operation type, can be **query**, **mutation** or **subscription**
 
-`HeroNameAndFriends` - optional *operation name* for debugging and tracing, but required for mutation and subscription
+`HeroNameAndFriends` - optional **operation name** for debugging and tracing, but required for **mutation** and **subscription**
 
-`hero` `name` `friends` `name` - section is called *selection set*
+`hero` `name` `friends` `name` - section is called **selection set**
 
-`hero` `name` `friends` `name` - are all called *fields*
+`hero` `name` `friends` `name` - are all called **fields**
 
 The query returns json array with `data` top level key
 
