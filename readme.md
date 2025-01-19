@@ -15,11 +15,11 @@ query HeroNameAndFriends {
 
 `query` - root operation type, can be *query*, *mutation* or *subscription*
 
-`HeroNameAndFriends` - optional *operation name* for debugging and tracing
+`HeroNameAndFriends` - optional *operation name* for debugging and tracing, but required for mutation and subscription
 
-`hero`, `name`, `friends`, `name` - section is called *selection set*
+`hero` `name` `friends` `name` - section is called *selection set*
 
-`hero`, `name`, `friends`, `name` - are all called *fields*
+`hero` `name` `friends` `name` - are all called *fields*
 
 The query returns json array with `data` top level key
 
@@ -64,3 +64,89 @@ query HumanWithArgs {
 ```
 
 The arguments are in (). What arguments can be used and how are defined by schema of the API.
+
+Arguments can be of different types: `Int` `String` `Boolean` `ENUM`
+
+`(unit: FOOT)` is an example of ENUM usage
+
+### The query above will should return something like this:
+
+```
+{
+  "data": {
+    "human": {
+      "name": "Luke Skywalker",
+      "height": 5.6430448
+    }
+  }
+}
+```
+
+## Aliases
+
+A qurey:
+```
+query GetUser4 {
+  {
+    user(id: 4) {
+      id
+      name
+    }
+  }
+}
+```
+
+Will return:
+```
+{
+  "data": {
+    "user": {
+      "id": 4,
+      "name": "Mark Zuckerberg",
+    }
+  }
+}
+```
+
+But you can optionally use an alias:
+```
+query GetUser4WithAlias {
+  {
+    zuck: user(id: 4) {
+      id
+      name
+    }
+  }
+}
+
+```
+
+And it will return:
+```
+{
+  "data": {
+    "zuck": {
+      "id": 4,
+      "name": "Mark Zuckerberg",
+    }
+  }
+}
+```
+
+This can be useful if you want to query for two users in the same query like this:
+```
+query GetUser4 {
+  {
+    zuck: user(id: 4) {
+      id
+      name
+    }
+    someOtherGuy: user(id: 1) {
+      id
+      name
+    }
+  }
+}
+```
+
+# Variables
