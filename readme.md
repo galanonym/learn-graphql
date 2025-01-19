@@ -24,7 +24,7 @@ Basics:
 * Or returns `errors` top level key
 * GraphQL queries look the same for single items or lists of items; expected based on schema
 
-The query above will should return something like this:
+The query above will return:
 
 ```
 {
@@ -64,7 +64,7 @@ query HumanWithArgs {
 * Arguments can be of different types: `Int` `String` `Boolean` `ENUM` (and more)
 * `(unit: FOOT)` is an example of ENUM usage
 
-The query above will should return something like this:
+The query above will return:
 
 ```
 {
@@ -79,7 +79,7 @@ The query above will should return something like this:
 
 ## Aliases
 
-A normal:
+A normal query:
 ```
 query GetUser4 {
   {
