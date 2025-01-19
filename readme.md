@@ -21,11 +21,9 @@ query HeroNameAndFriends {
 
 `hero` `name` `friends` `name` - are all called **fields**
 
-The query returns json array with `data` top level key
-
-Or returns `errors` top level key
-
-GraphQL queries look the same for single items or lists of items; expected based on schema
+* The query returns json array with `data` top level key
+* Or returns `errors` top level key
+* GraphQL queries look the same for single items or lists of items; expected based on schema
 
 ### The query above will should return something like this:
 
