@@ -65,7 +65,7 @@ query HumanWithArgs {
 
 The arguments are in (). What arguments can be used and how are defined by schema of the API.
 
-Arguments can be of different types: `Int` `String` `Boolean` `ENUM`
+Arguments can be of different types: `Int` `String` `Boolean` `ENUM` (and more)
 
 `(unit: FOOT)` is an example of ENUM usage
 
@@ -84,7 +84,7 @@ Arguments can be of different types: `Int` `String` `Boolean` `ENUM`
 
 ## Aliases
 
-A qurey:
+A normal:
 ```
 query GetUser4 {
   {
@@ -133,7 +133,7 @@ And it will return:
 }
 ```
 
-This can be useful if you want to query for two users in the same query like this:
+This can be nessesary if you want to query for two specific users in the same query like this:
 ```
 query GetUser4 {
   {
