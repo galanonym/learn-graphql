@@ -60,13 +60,11 @@ query HumanWithArgs {
 }
 ```
 
-The arguments are in (). What arguments can be used and how are defined by schema of the API.
+* The arguments are in (). What arguments can be used and how are defined by schema of the API.
+* Arguments can be of different types: `Int` `String` `Boolean` `ENUM` (and more)
+* `(unit: FOOT)` is an example of ENUM usage
 
-Arguments can be of different types: `Int` `String` `Boolean` `ENUM` (and more)
-
-`(unit: FOOT)` is an example of ENUM usage
-
-### The query above will should return something like this:
+The query above will should return something like this:
 
 ```
 {
