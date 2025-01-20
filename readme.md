@@ -172,7 +172,8 @@ Naming conventions:
 * `$episode` - inside the query is where the variable replaces static value
 * `episode` - inside variables the key should be the same as the name of declared variable
 
-#Inline fragments
+# Inline fragments
+
 ```
 query ThemeFilesPaginated($themeId: ID!) {
   theme(id: $themeId) {
@@ -196,6 +197,7 @@ query ThemeFilesPaginated($themeId: ID!) {
   }
 }
 ```
+
 * The `... on` is called **inline fragment**. Fragment in GraphQL means some chosen fields of an object. Inline fragment means that we choose some fields of an object directly inline
 * The `... on` syntax in GraphQL is part of an **inline fragment** that specifies **type condition**. It allows querying fields on specific types within a **union type** (or **interface type**).
 * `body` is a union type - field that can directly resolve to three unrelated types, where each can have different fields (specified by schema)
