@@ -200,6 +200,6 @@ query ThemeFilesPaginated($themeId: ID!) {
 
 * The `... on` is called **inline fragment**. Fragment in GraphQL means some chosen fields of an object. Inline fragment means that we choose some fields of an object directly inline
 * The `... on` syntax in GraphQL is part of an **inline fragment** that specifies **type condition**. It allows querying fields on specific types within a **union type** (or **interface type**).
-* `body` is a union type - field that can directly resolve to three unrelated types, where each can have different fields (specified by schema)
+* `body` is a union type - field that can directly resolve to three unrelated types (BodyBase64, BodyText, BodyUrl), where each type can have different fields (specified by schema)
 * So when looping through nodes with differend body, when body type is **OnlineStoreThemeFileBodyText** it will take field `content` from that node.
 * But if body type is **OnlineStoreThemeFileBodyUrl** it will take field `url` from that node.
