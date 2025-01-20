@@ -171,9 +171,9 @@ Naming conventions:
 * `($episode: Episode)` - **variable definition** is declaration of the variable and its type and is after **operation name**
 * `$episode` - inside the query is where the variable replaces static value
 * `episode` - inside variables the key should be the same as the name of declared variable
+```
 
 #Inline fragments
-
 ```
 query ThemeFilesPaginated($themeId: ID!) {
   theme(id: $themeId) {
