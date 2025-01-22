@@ -26,7 +26,7 @@ Basics:
 
 The query above will return:
 
-```
+```GraphQL
 {
   "data": {
     "hero": {
@@ -49,7 +49,7 @@ The query above will return:
 
 ## With arguments
 
-```
+```GraphQL
 query HumanWithArgs {
   {
     human(id: "1000") {
@@ -66,7 +66,7 @@ query HumanWithArgs {
 
 The query above will return:
 
-```
+```GraphQL
 {
   "data": {
     "human": {
@@ -80,7 +80,7 @@ The query above will return:
 ## Aliases
 
 A normal query:
-```
+```GraphQL
 query GetUser4 {
   {
     user(id: 4) {
@@ -92,7 +92,7 @@ query GetUser4 {
 ```
 
 Will return:
-```
+```JSON
 {
   "data": {
     "user": {
@@ -104,7 +104,7 @@ Will return:
 ```
 
 But you can optionally use an alias:
-```
+```GraphQL
 query GetUser4WithAlias {
   {
     zuck: user(id: 4) {
@@ -117,7 +117,7 @@ query GetUser4WithAlias {
 ```
 
 And it will return:
-```
+```JSON
 {
   "data": {
     "zuck": {
@@ -129,7 +129,7 @@ And it will return:
 ```
 
 This can be nessesary if you want to query for two specific users in the same query like this:
-```
+```GraphQL
 query GetUser4 {
   {
     zuck: user(id: 4) {
@@ -150,7 +150,7 @@ query GetUser4 {
 * Variables are passed as a seperate dictionar
 * You should never do string interpolation for query part
 
-```
+```GraphQL
 #Operation
 query HeroNameAndFriends($episode: Episode) {
   hero(episode: $episode) {
@@ -174,7 +174,7 @@ Naming conventions:
 
 # Inline fragments
 
-```
+```GraphQL
 query ThemeFilesPaginated($themeId: ID!) {
   theme(id: $themeId) {
     files(first: 50) {
