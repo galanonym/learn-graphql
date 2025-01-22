@@ -203,3 +203,13 @@ query ThemeFilesPaginated($themeId: ID!) {
 * `body` is a union type - field that can directly resolve to three unrelated types (BodyBase64, BodyText, BodyUrl), where each type can have different fields (specified by schema)
 * So when looping through nodes with differend body, when body type is **OnlineStoreThemeFileBodyText** it will take field `content` from that node.
 * But if body type is **OnlineStoreThemeFileBodyUrl** it will take field `url` from that node.
+
+# Shopify pagination
+
+When working with Shopify API, you can query multiple items by either nodes or by edges.
+
+![Nodes and Edges Shopify Screenshot](/img/screen_shopify_edges_nodes.png)
+
+* There is almost no difference if you want to use edges or nodes
+* Edges gives one more level deeper result, and have possibility to list cursor value for each element
+* Nodes lists one less level, and only have cursor inside sibling pageInfo key
