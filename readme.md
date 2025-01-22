@@ -26,7 +26,7 @@ Basics:
 
 The query above will return:
 
-```GraphQL
+```JSON
 {
   "data": {
     "hero": {
@@ -66,7 +66,7 @@ query HumanWithArgs {
 
 The query above will return:
 
-```GraphQL
+```JSON
 {
   "data": {
     "human": {
@@ -147,11 +147,11 @@ query GetUser4 {
 # Variables
 
 * GraphQL does not want you to pass dynamic variables into query with string concatenation
-* Variables are passed as a seperate dictionar
+* Variables are passed as a seperate JSON dictionary
 * You should never do string interpolation for query part
 
+Operation:
 ```GraphQL
-#Operation
 query HeroNameAndFriends($episode: Episode) {
   hero(episode: $episode) {
     name
@@ -160,8 +160,9 @@ query HeroNameAndFriends($episode: Episode) {
     }
   }
 }
-
-#Variables
+```
+Variables:
+```JSON
 {
   "episode": "JEDI"
 }
