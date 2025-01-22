@@ -2,7 +2,7 @@
 
 ## Normal Queries
 
-```
+```GraphQL
 query HeroNameAndFriends {
   hero {
     name
