@@ -150,7 +150,7 @@ query GetUser4 {
 * Variables are passed as a seperate JSON dictionary
 * You should never do string interpolation for query part
 
-Operation:
+Operation & Variables:
 ```GraphQL
 query HeroNameAndFriends($episode: Episode) {
   hero(episode: $episode) {
@@ -161,7 +161,6 @@ query HeroNameAndFriends($episode: Episode) {
   }
 }
 ```
-Variables:
 ```JSON
 {
   "episode": "JEDI"
